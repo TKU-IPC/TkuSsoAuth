@@ -1,0 +1,26 @@
+﻿@using DdsLib;
+@{ 
+    string _uid = "";
+    SsoObj so = null;
+    try
+    {
+        so = new SsoObj(true);
+        _uid = so.sso_userid;
+    }
+    catch { }
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+         function getSsoLoginToken()
+         {
+          return "@_uid";
+         }
+    </script>
+</head>
+<body>
+    <font size="5">Hello</font>
+</body>
+</html>
